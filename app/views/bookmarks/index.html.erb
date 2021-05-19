@@ -1,102 +1,248 @@
 <div>
   <div>
     <h1>
-      List of all bookmarks
+      <%= @current_user.first_name %> <%= @current_user.last_name%>'s bookmarks
     </h1>
   </div>
 </div>
 
+<form action="/insert_bookmark" method="post">
+
+  <select name="query_movie_id" id="movie_id_box">
+    
+      <option value="53">
+        
+      </option>
+
+      <option value="1">
+        The Shawshank Redemption
+      </option>
+
+      <option value="2">
+        The Godfather
+      </option>
+
+      <option value="3">
+        The Godfather: Part II
+      </option>
+
+      <option value="4">
+        The Dark Knight
+      </option>
+
+      <option value="5">
+        12 Angry Men
+      </option>
+
+      <option value="6">
+        Schindler&#39;s List
+      </option>
+
+      <option value="7">
+        The Lord of the Rings: The Return of the King
+      </option>
+
+      <option value="8">
+        Pulp Fiction
+      </option>
+
+      <option value="9">
+        The Good, the Bad and the Ugly
+      </option>
+
+      <option value="10">
+        The Lord of the Rings: The Fellowship of the Ring
+      </option>
+
+      <option value="11">
+        Fight Club
+      </option>
+
+      <option value="12">
+        Forrest Gump
+      </option>
+
+      <option value="13">
+        Inception
+      </option>
+
+      <option value="14">
+        The Lord of the Rings: The Two Towers
+      </option>
+
+      <option value="15">
+        The Empire Strikes Back
+      </option>
+
+      <option value="16">
+        The Matrix
+      </option>
+
+      <option value="17">
+        GoodFellas
+      </option>
+
+      <option value="18">
+        One Flew Over the Cuckoo&#39;s Nest
+      </option>
+
+      <option value="19">
+        Seven Samurai
+      </option>
+
+      <option value="20">
+        Se7en
+      </option>
+
+      <option value="21">
+        Life Is Beautiful
+      </option>
+
+      <option value="22">
+        City of God
+      </option>
+
+      <option value="23">
+        The Silence of the Lambs
+      </option>
+
+      <option value="24">
+        It&#39;s a Wonderful Life
+      </option>
+
+      <option value="25">
+        Star Wars
+      </option>
+
+      <option value="26">
+        Saving Private Ryan
+      </option>
+
+      <option value="27">
+        Spirited Away
+      </option>
+
+      <option value="28">
+        The Green Mile
+      </option>
+
+      <option value="29">
+        Interstellar
+      </option>
+
+      <option value="30">
+        Parasite
+      </option>
+
+      <option value="31">
+        Léon: The Professional
+      </option>
+
+      <option value="32">
+        The Usual Suspects
+      </option>
+
+      <option value="33">
+        Harakiri
+      </option>
+
+      <option value="34">
+        The Lion King
+      </option>
+
+      <option value="35">
+        Back to the Future
+      </option>
+
+      <option value="36">
+        The Pianist
+      </option>
+
+      <option value="37">
+        Terminator 2: Judgment Day
+      </option>
+
+      <option value="38">
+        American History X
+      </option>
+
+      <option value="39">
+        Modern Times
+      </option>
+
+      <option value="40">
+        Psycho
+      </option>
+
+      <option value="41">
+        Gladiator
+      </option>
+
+      <option value="42">
+        City Lights
+      </option>
+
+      <option value="43">
+        The Departed
+      </option>
+
+      <option value="44">
+        The Intouchables
+      </option>
+
+      <option value="45">
+        Whiplash
+      </option>
+
+      <option value="46">
+        The Prestige
+      </option>
+
+      <option value="47">
+        Grave of the Fireflies
+      </option>
+
+      <option value="48">
+        Hamilton
+      </option>
+
+      <option value="49">
+        Once Upon a Time in the West
+      </option>
+
+      <option value="50">
+        Casablanca
+      </option>
+
+      <option value="51">
+        Cinema Paradiso
+      </option>
+
+      <option value="52">
+        Rear Window
+      </option>
+[#&lt;Movie id: 53, title: &quot;&quot;, year: nil, duration: nil, description: &quot;&quot;, image: &quot;&quot;, director_id: 4027, created_at: &quot;2021-05-19 21:00:13&quot;, updated_at: &quot;2021-05-19 21:00:13&quot;&gt;, #&lt;Movie id: 1, title: &quot;The Shawshank Redemption&quot;, year: 1994, duration: 142, description: &quot;Framed in the 1940s for the double murder of his w...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/5KCVkau1HEl7ZzfPsK...&quot;, director_id: 4027, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 2, title: &quot;The Godfather&quot;, year: 1972, duration: 175, description: &quot;Spanning the years 1945 to 1955, a chronicle of th...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRo...&quot;, director_id: 1776, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 3, title: &quot;The Godfather: Part II&quot;, year: 1974, duration: 202, description: &quot;In the continuing saga of the Corleone crime famil...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPX...&quot;, director_id: 1776, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 4, title: &quot;The Dark Knight&quot;, year: 2008, duration: 152, description: &quot;Batman raises the stakes in his war on crime. With...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m...&quot;, director_id: 525, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 5, title: &quot;12 Angry Men&quot;, year: 1957, duration: 97, description: &quot;The defense and the prosecution have rested and th...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/ppd84D2i9W8jXmsyIn...&quot;, director_id: 39996, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 6, title: &quot;Schindler&#39;s List&quot;, year: 1993, duration: 195, description: &quot;The true story of how businessman Oskar Schindler ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/c8Ass7acuOe4za6DhS...&quot;, director_id: 488, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 7, title: &quot;The Lord of the Rings: The Return of the King&quot;, year: 2003, duration: 201, description: &quot;Aragorn is revealed as the heir to the ancient kin...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OA...&quot;, director_id: 108, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 8, title: &quot;Pulp Fiction&quot;, year: 1994, duration: 154, description: &quot;A burger-loving hit man, his philosophical partner...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/plnlrtBUULT0rh3Xsj...&quot;, director_id: 138, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 9, title: &quot;The Good, the Bad and the Ugly&quot;, year: 1966, duration: 161, description: &quot;While the Civil War rages between the Union and th...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/eWivEg4ugIMAd7d4uW...&quot;, director_id: 4385, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 10, title: &quot;The Lord of the Rings: The Fellowship of the Ring&quot;, year: 2001, duration: 178, description: &quot;Young hobbit Frodo Baggins, after inheriting a mys...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnv...&quot;, director_id: 108, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 11, title: &quot;Fight Club&quot;, year: 1999, duration: 139, description: &quot;A ticking-time-bomb insomniac and a slippery soap ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/9dlcOgehxDK4QaC2QD...&quot;, director_id: 7467, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 12, title: &quot;Forrest Gump&quot;, year: 1994, duration: 142, description: &quot;A man with a low IQ has accomplished great things ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/clolk7rB5lAjs41SD0...&quot;, director_id: 24, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 13, title: &quot;Inception&quot;, year: 2010, duration: 148, description: &quot;Cobb, a skilled thief who commits corporate espion...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqA...&quot;, director_id: 525, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 14, title: &quot;The Lord of the Rings: The Two Towers&quot;, year: 2002, duration: 179, description: &quot;Frodo and Sam are trekking to Mordor to destroy th...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHH...&quot;, director_id: 108, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 15, title: &quot;The Empire Strikes Back&quot;, year: 1980, duration: 124, description: &quot;The epic saga continues as Luke Skywalker, in hope...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/7BuH8itoSrLExs2YZS...&quot;, director_id: 10930, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 16, title: &quot;The Matrix&quot;, year: 1999, duration: 136, description: &quot;Set in the 22nd century, The Matrix tells the stor...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9Gkd...&quot;, director_id: 9339, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 17, title: &quot;GoodFellas&quot;, year: 1990, duration: 145, description: &quot;The true story of Henry Hill, a half-Irish, half-S...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/6QMSLvU5ziIL2T6Vrk...&quot;, director_id: 1032, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 18, title: &quot;One Flew Over the Cuckoo&#39;s Nest&quot;, year: 1975, duration: 133, description: &quot;While serving time for insanity at a state mental ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/3jcbDmRFiQ83drXNOv...&quot;, director_id: 3974, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 19, title: &quot;Seven Samurai&quot;, year: 1954, duration: 207, description: &quot;A samurai answers a village&#39;s request for protecti...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/1wCRVLGI7SoTOoDRzW...&quot;, director_id: 5026, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 20, title: &quot;Se7en&quot;, year: 1995, duration: 127, description: &quot;Two homicide detectives are on a desperate hunt fo...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/6yoghtyTpznpBik8En...&quot;, director_id: 7467, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 21, title: &quot;Life Is Beautiful&quot;, year: 1997, duration: 116, description: &quot;A touching story of an Italian book seller of Jewi...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/74hLDKjD5aGYOotO6e...&quot;, director_id: 4818, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 22, title: &quot;City of God&quot;, year: 2002, duration: 130, description: &quot;Buscapé was raised in a very violent environment. ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/k7eYdWvhYQyRQoU2TB...&quot;, director_id: 8557, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 23, title: &quot;The Silence of the Lambs&quot;, year: 1991, duration: 119, description: &quot;Clarice Starling is a top student at the FBI&#39;s tra...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/rplLJ2hPcOQmkFhTqU...&quot;, director_id: 16294, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 24, title: &quot;It&#39;s a Wonderful Life&quot;, year: 1946, duration: 130, description: &quot;A holiday favourite for generations...  George Bai...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/bSqt9rhDZx1Q7UZ86d...&quot;, director_id: 2662, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 25, title: &quot;Star Wars&quot;, year: 1977, duration: 121, description: &quot;Princess Leia is captured and held hostage by the ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eW...&quot;, director_id: 1, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 26, title: &quot;Saving Private Ryan&quot;, year: 1998, duration: 169, description: &quot;As U.S. troops storm the beaches of Normandy, thre...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/JC8KQ2BXaAIFEU8zEu...&quot;, director_id: 488, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 27, title: &quot;Spirited Away&quot;, year: 2001, duration: 125, description: &quot;A young girl, Chihiro, becomes trapped in a strang...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/2TeJfUZMGolfDdW6DK...&quot;, director_id: 608, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 28, title: &quot;The Green Mile&quot;, year: 1999, duration: 189, description: &quot;A supernatural tale set on death row in a Southern...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNE...&quot;, director_id: 4027, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 29, title: &quot;Interstellar&quot;, year: 2014, duration: 169, description: &quot;The adventures of a group of explorers who make us...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU...&quot;, director_id: 525, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 30, title: &quot;Parasite&quot;, year: 2019, duration: 133, description: &quot;All unemployed, Ki-taek&#39;s family takes peculiar in...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYy...&quot;, director_id: 21684, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 31, title: &quot;Léon: The Professional&quot;, year: 1994, duration: 111, description: &quot;Léon, the top hit man in New York, has earned a re...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/91bUbxcOvTinqrPLrn...&quot;, director_id: 59, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 32, title: &quot;The Usual Suspects&quot;, year: 1995, duration: 106, description: &quot;Held in an L.A. interrogation room, Verbal Kint at...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/bUPmtQzrRhzqYySeiM...&quot;, director_id: 9032, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 33, title: &quot;Harakiri&quot;, year: 1962, duration: 135, description: &quot;An unusual request for ritual suicide on a feudal ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/fRqVjso3rdEcxZHXWE...&quot;, director_id: 76978, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 34, title: &quot;The Lion King&quot;, year: 1994, duration: 89, description: &quot;A young lion prince is cast out of his pride by hi...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8Dy...&quot;, director_id: 15812, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 35, title: &quot;Back to the Future&quot;, year: 1985, duration: 116, description: &quot;Eighties teenager Marty McFly is accidentally sent...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/xlBivetfrtF84Yx0zI...&quot;, director_id: 24, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 36, title: &quot;The Pianist&quot;, year: 2002, duration: 150, description: &quot;The true story of pianist Władysław Szpilman&#39;s exp...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/3DzePKMbLMIM636S6s...&quot;, director_id: 3556, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 37, title: &quot;Terminator 2: Judgment Day&quot;, year: 1991, duration: 137, description: &quot;Nearly 10 years have passed since Sarah Connor was...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/5M0j0B18abtBI5gi2R...&quot;, director_id: 2710, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 38, title: &quot;American History X&quot;, year: 1998, duration: 119, description: &quot;Derek Vineyard is paroled after serving 3 years in...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/c2gsmSQ2Cqv8zosqKO...&quot;, director_id: 814, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 39, title: &quot;Modern Times&quot;, year: 1936, duration: 87, description: &quot;The Tramp struggles to live in modern industrial s...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/7uoiKOEjxBBW0AgDGQ...&quot;, director_id: 13848, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 40, title: &quot;Psycho&quot;, year: 1960, duration: 109, description: &quot;When larcenous real estate clerk Marion Crane goes...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/nR4LD4ZJg2n6LZQpcO...&quot;, director_id: 2636, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 41, title: &quot;Gladiator&quot;, year: 2000, duration: 155, description: &quot;In the year 180, the death of emperor Marcus Aurel...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/ofDw0himYNpehWA69O...&quot;, director_id: 578, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 42, title: &quot;City Lights&quot;, year: 1931, duration: 87, description: &quot;In this sound-era silent film, a tramp falls in lo...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/bXNvzjULc9jrOVhGfj...&quot;, director_id: 13848, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 43, title: &quot;The Departed&quot;, year: 2006, duration: 151, description: &quot;To take down South Boston&#39;s Irish Mafia, the polic...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/jyAgiqVSx5fl0NNj7W...&quot;, director_id: 1032, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 44, title: &quot;The Intouchables&quot;, year: 2011, duration: 113, description: &quot;A true story of two men who should never have met ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/w7WxNbb0mcWpwDMd3p...&quot;, director_id: 84425, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 45, title: &quot;Whiplash&quot;, year: 2014, duration: 107, description: &quot;Under the direction of a ruthless instructor, a ta...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/6uSPcdGNA2A6vJmCag...&quot;, director_id: 136495, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 46, title: &quot;The Prestige&quot;, year: 2006, duration: 130, description: &quot;A mysterious story of two magicians whose intense ...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/pvSESD7ujxWZwtYDb9...&quot;, director_id: 525, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 47, title: &quot;Grave of the Fireflies&quot;, year: 1988, duration: 89, description: &quot;In the final months of World War II, 14-year-old S...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/wcNkHDbyc290hcWk7K...&quot;, director_id: 628, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 48, title: &quot;Hamilton&quot;, year: 2020, duration: 160, description: &quot;Presenting the tale of American founding father Al...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/h1B7tW0t399VDjAcWJ...&quot;, director_id: 1485823, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 49, title: &quot;Once Upon a Time in the West&quot;, year: 1968, duration: 166, description: &quot;A widow whose land and life are in danger as the r...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/3RymloPYcEPx30T1vT...&quot;, director_id: 4385, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 50, title: &quot;Casablanca&quot;, year: 1942, duration: 102, description: &quot;In Casablanca, Morocco in December 1941, a cynical...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/m9tut4CqlBUWwnWQIu...&quot;, director_id: 4109, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 51, title: &quot;Cinema Paradiso&quot;, year: 1988, duration: 124, description: &quot;A filmmaker recalls his childhood, when he fell in...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/8SRUfRUi6x4O68n0VC...&quot;, director_id: 65314, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;, #&lt;Movie id: 52, title: &quot;Rear Window&quot;, year: 1954, duration: 112, description: &quot;A wheelchair-bound photographer spies on his neigh...&quot;, image: &quot;https://image.tmdb.org/t/p/w500/qitnZcLP7C9DLRuPpm...&quot;, director_id: 2636, created_at: &quot;2015-08-12 17:20:11&quot;, updated_at: &quot;2015-08-12 17:20:11&quot;&gt;]  </select>
+  <button>
+    Bookmark this movie!
+  </button>
+</form>
 <hr>
+<table class="table" border="1">
+  <tr>
+    <th>
+      Movie
+    </th>
 
-<div>
-  <div>
-    <h2>
-      Add a new bookmark
-    </h2>
+    <th>
+      Created at
+    </th>
 
-    <form action="/insert_bookmark" method="post">
-      <div>
-        <label for="user_id_box">
-          User
-        </label>
+    <th>
+    </th>
+  </tr>
+</table>
 
-        <input type="text" id="user_id_box" name="query_user_id">
-      </div>
-
-      <div>
-        <label for="movie_id_box">
-          Movie
-        </label>
-
-        <input type="text" id="movie_id_box" name="query_movie_id">
-      </div>
-
-      <button>
-        Create bookmark
-      </button>
-    </form>
-  </div>
-</div>
-
-<hr>
-<div>
-  <div>
-    <table>
-      <tr>
-        <th>
-          ID
-        </th>
-
-        <th>
-          User
-        </th>
-
-        <th>
-          Movie
-        </th>
-
-        <th>
-          Created at
-        </th>
-
-        <th>
-          Updated at
-        </th>
-
-        <th>
-        </th>
-      </tr>
-
-      <% @list_of_bookmarks.each do |a_bookmark| %>
-      <tr>
-        <td>
-          <%= a_bookmark.id %>
-        </td>
-
-        <td>
-          <%= a_bookmark.user_id %>
-        </td>
-
-        <td>
-          <%= a_bookmark.movie_id %>
-        </td>
-
-        <td>
-          <%= time_ago_in_words(a_bookmark.created_at) %> ago
-        </td>
-        <td>
-          <%= time_ago_in_words(a_bookmark.updated_at) %> ago
-        </td>
-
-        <td>
-          <a href="/bookmarks/<%= a_bookmark.id %>">
-            Show details
-          </a>
-        </td>
-      </tr>
-      <% end %>
-    </table>
-  </div>
-</div>
-
-<hr>
+    <footer>
+      <small>
+        This product uses the TMDb API but is not endorsed or certified by TMDb.
+      </small>

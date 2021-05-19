@@ -17,6 +17,7 @@
   <body>
 
   <nav>
+    <% if @current_user == nil %>
       <ul>
           <li>
             <a href="/user_sign_in">
@@ -28,6 +29,18 @@
               Sign up
             </a>
           </li>
+          <% else %>
+          <li>
+            <a href="/user_sign_out">
+              Sign out
+            </a>
+          </li>
+          <li>
+            <a href="/bookmarks">
+              My bookmarks
+            </a>
+          </li>
+          <% end %>
         <li>
           <a href="/">
             Home
