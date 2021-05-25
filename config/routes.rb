@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get("/bookmarks/:path_id", { :controller => "bookmarks", :action => "show" })
   
   # UPDATE
-  
+
   post("/modify_bookmark/:path_id", { :controller => "bookmarks", :action => "update" })
   
   # DELETE
